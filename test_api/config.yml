@@ -1,0 +1,28 @@
+authen:
+  user:
+    - username : tsm_trainee
+      password : sGS]Jx6.
+api:
+  f5_lb:
+    - address: https://10.98.200.26
+      pool:
+        - uri: /mgmt/tm/ltm/pool
+      node:
+        - uri: /mgmt/tm/ltm/node
+      virtual:
+        - uri: /mgmt/tm/ltm/virtual
+      rule:
+        - uri: /mgmt/tm/ltm/rule
+      token:
+        -uri: /mgmt/shared/authn/login
+
+database:
+  elastic_search:
+    host: 0.0.0.0
+    port: 9200
+    user: ""
+    passwd: ""
+    index_prefix: "acmdb"
+    scheme: http
+    verify_certs: false
+
