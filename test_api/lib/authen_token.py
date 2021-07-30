@@ -20,7 +20,9 @@ class token :
     def access_token(self,session) :
         response = session.post(url=self.find_url("token"), json=self.set_header(), verify=False)
         for finder in response:
-            token = finder["token"]["token"]
+            f_token = finder["token"]
+            for finder2 in f_token:
+                token = finder2["token"]
         print(token)
         return token
     
