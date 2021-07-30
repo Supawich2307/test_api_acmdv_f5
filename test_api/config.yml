@@ -14,7 +14,7 @@ api:
       rule:
         - uri: /mgmt/tm/ltm/rule
       token:
-        -uri: /mgmt/shared/authn/login
+        - uri: /mgmt/shared/authn/login
 
 database:
   elastic_search:
