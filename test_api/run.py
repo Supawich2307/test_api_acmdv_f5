@@ -7,8 +7,8 @@ import json
 
 
 session = retry_session()
-def req_pool(token): 
-    url = my_token.find_url("pool")
+def req_pool(self,token): 
+    url = my_token.find_url(self,attribute="pool")
     headers = {
         "X-F5-Auth-Token": token,
         "Accept": "application/json"
