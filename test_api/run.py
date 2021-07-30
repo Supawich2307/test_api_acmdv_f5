@@ -54,7 +54,7 @@ def req_rule(token):
 
 
 if __name__=='__main__':
-    token = my_token().access_token()
+    token = my_token().access_token(session)
     req_pool(token)
     req_node(token)
     req_virtual(token)
