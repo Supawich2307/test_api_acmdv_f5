@@ -5,10 +5,10 @@ from lib.authen_token import token as my_token
 # import numpy as np
 import json
 
-
+my_token = my_token()
 session = retry_session()
-def req_pool(self,token): 
-    url = my_token.find_url(self,attribute="pool")
+def req_pool(token): 
+    url = my_token.find_url(attribute="pool")
     headers = {
         "X-F5-Auth-Token": token,
         "Accept": "application/json"
@@ -54,7 +54,7 @@ def req_rule(token):
 
 
 if __name__=='__main__':
-    token = my_token().access_token(session)
+    token = my_token.access_token(session)
     req_pool(token)
     req_node(token)
     req_virtual(token)
