@@ -19,7 +19,7 @@ class token :
         return self.header
     def access_token(self,session) :
         response = session.post(url=self.find_url("token"), json=self.set_header(), verify=False)
-        for finder in response.paginate():
+        for finder in response.json:
             f_token = finder["token"]
             for finder2 in f_token:
                 token = finder2["token"]
